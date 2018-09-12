@@ -1,0 +1,111 @@
+#slider-controls
+  padding-top: rem(50px)
+
+.slider
+  position: absolute
+  top: 0%
+  left: 0%
+  right:  0%
+  bottom: 0%
+  z-index: -1
+  &__dot
+    padding-top: 10px
+    position: relative
+    height: 16px
+    width: 16px
+    border: 1px solid #fff
+    border-radius: 50%
+    color: transparent
+    &:after
+      position: absolute
+      display: none
+      content: ''
+      border-radius: 50%
+      height: 9px
+      width: 9px
+      background: #fff
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+    &.active:after
+      display: block
+  &__dot+&__dot
+    margin-left: rem(14px)
+  &__prev,&__next
+    padding-top: 10px
+    width: 20px
+    height: 34px
+    background-size: cover
+  &__prev
+    margin-right: rem(40px)
+    background-image: url("../../img/arrow-prev.png")
+  &__next
+    margin-left: rem(40px)
+    background-image: url("../../img/arrow-next.png")
+  &-content
+    overflow-x: hidden
+    padding-top: rem(36px)
+    padding-bottom: rem(38px)
+    position: relative
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      top: 0
+      bottom: 0
+      left: -20%
+      right: 62%
+      z-index: -1
+      background: rgba(0,0,0,0.4)
+      transform: skewX(-15deg)
+  &-title
+    border-left: 3px solid white
+    margin-bottom: rem(25px)
+    margin-left: -1.4rem
+    transform: skewX(-15deg)
+  &-header
+    margin-bottom: rem(10px)
+    padding:  rem(0 22px 0 9px)
+    float: left
+    &__text
+      font-family: "Intro-Black",sans-serif
+      font-size: 5.5rem
+      text-transform: uppercase
+      letter-spacing: 2px
+  &-descr
+    float: left
+    padding: rem(0 12px 12px)
+    margin-right: rem(15px)
+    &__text
+      font-family: "Intro-Black",sans-serif
+      text-align: center
+      font-size: rem(36px)
+      font-weight: 900
+      font-style: italic
+      border-bottom: 3px solid black
+      padding: rem(0 40px 4px)
+  &-price
+    float: left
+    display: inline-block
+    vertical-align: middle
+    padding: rem(0 12px)
+    margin-top: rem(8px)
+    &__text
+      font-family: Intro,sans-serif
+      font-size: 1rem
+      color: #fff
+    &__number
+      font-size: rem(45px)
+      padding: rem(0 20px)
+  &-text
+    color: #ffffff
+    font-size: rem(19px)
+    font-weight: 700
+    text-transform: uppercase
+    padding-bottom: rem(14px)
+.skew-box
+  background-color: rgba(255,255,255,0.7)
+.skew-box> div, .skew-box>h1
+  transform: skewX(15deg)
+.skew-box--green
+  background-image: linear-gradient(to right, #2aeb2a 0%, #007500 100%)

@@ -1,0 +1,23 @@
+{
+  "name": "template",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dan Bondarchuk <tyrandan@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "bootstrap-3-grid": "^0.0.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

@@ -1,0 +1,32 @@
+.menu-section
+  background: rgba(0,0,0,0.5)
+
+.menu,.slider__dots
+  list-style: none
+.menu
+  padding: rem(8px 0px)
+  padding-left: rem(48px)
+  &__item
+    float: left
+    border-left: 1px solid #cccccc
+    padding: rem(4px 64px 0px)
+    letter-spacing: rem(0.5px)
+    line-height: 1
+    & a:hover
+      text-decoration: underline
+  &-small
+    display: none
+    float: right
+    width: 30px
+    height: 30px
+    padding: 8px 5px
+    border-radius: 5px
+    span
+      display: block
+      margin-bottom: 5px
+      height: 2px
+      background: #fff
+#menu__switcher
+  display: none
+  &:checked ~ .menu
+    display: block

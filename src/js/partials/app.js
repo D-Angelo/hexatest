@@ -11,10 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 20,
         loop: true,
         rtl: false,
-        onInit: function () {
-            return   this.resizeHandler();
-
-        },
         onChange: function(){
             return  setActiveDot()
         }
@@ -72,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     dotActive.classList.add("active");
     setInterval(function(){return slider.next()}, 2000);
 resizeBg();
+slider.resizeHandler();
 
 });
 window.addEventListener("resize", resizeBg, false);
